@@ -350,3 +350,28 @@ For the first pass of Codex-generated code, the goal is:
     
 
 Subsequent iterations can refine PDF layout, theming, performance, and configurability.
+
+## Quick start
+
+1. Install dependencies (preferably in a virtual environment):
+
+   ```bash
+   pip install .
+   ```
+
+2. Run the exporter with a vault path:
+
+   ```bash
+   obsidian-export --vault-dir /path/to/vault --verbose
+   ```
+
+   PDFs are written to `/path/to/vault/_pdf_build` by default, mirroring the vault directory layout. Use `--output-dir` to write elsewhere.
+
+## Running tests
+
+Install the optional development dependencies and run the pytest suite:
+
+```bash
+pip install .[dev]
+pytest
+```
